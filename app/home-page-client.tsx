@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useActionState, useRef } from 'react';
+import { useState, useEffect, useActionState, useRef, useTransition } from 'react';
 import { useFormStatus } from 'react-dom';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -248,6 +248,7 @@ export default function HomePageClient({ initialCounters }) {
   const [isEventModalOpen, setEventModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [counters, setCounters] = useState(initialCounters);
+  const [isPending, startTransition] = useTransition();
   const pageUrl = typeof window !== 'undefined' ? window.location.href : '';
 
   const events = [
@@ -277,8 +278,10 @@ export default function HomePageClient({ initialCounters }) {
   }
 
   const handleShare = () => {
-      incrementShareCount(); // Call server action
+    startTransition(() => {
       setCounters(prev => ({...prev, voces_amplificadas: prev.voces_amplificadas + 1}));
+      incrementShareCount();
+    });
   }
 
   const renderCustomArrow = (onClickHandler, hasNext, label, direction) => (
