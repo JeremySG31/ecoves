@@ -46,7 +46,7 @@ function ReportForm({ onReportSubmit }) {
   const formRef = useRef(null)
 
   useEffect(() => {
-      if (state.success) {
+      if (state.success && formRef.current) {
           onReportSubmit();
           formRef.current.reset()
       }
@@ -244,7 +244,7 @@ function ImpactCounter({ target, label, icon }) {
 
 // --- MAIN CLIENT PAGE ---
 export default function HomePageClient({ initialCounters }) {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [isShareModalOpen, setShareModalOpen] = useState(false);
   const [isEventModalOpen, setEventModalOpen] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState(null);
