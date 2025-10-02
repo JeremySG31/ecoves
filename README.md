@@ -1,40 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+### Resumen
 
-## Getting Started
+ECOVES es una aplicación web diseñada para promover la conciencia y la acción ambiental en la comunidad de Villa El Salvador. Ofrece una plataforma para que los residentes reporten problemas ambientales, participen en eventos en línea y se mantengan informados sobre las iniciativas locales de sostenibilidad.
 
-First, run the development server:
+### Estructura del Proyecto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Diseño y Estilos:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **Tema:** Un tema oscuro con un interruptor para modo claro.
+*   **Paleta de Colores:** Verde como color de acento, con una paleta de escala de grises para fondos y texto.
+*   **Tipografía:** Familia de fuentes "Poppins".
+*   **Diseño:** Un diseño responsivo, enfocado en móviles primero, que se adapta a diferentes tamaños de pantalla.
+*   **Componentes:**
+    *   **Encabezado:** Un encabezado fijo con el logo, enlaces de navegación y un selector de tema.
+    *   **Sección Principal (Hero):** Un carrusel con imágenes de pantalla completa y llamadas a la acción.
+    *   **Sección de Impacto:** Contadores animados para mostrar métricas clave.
+    *   **Cuadrícula (Grid):** Una cuadrícula responsiva para mostrar noticias y eventos.
+    *   **Tarjetas (Cards):** Tarjetas con imágenes y texto para noticias y eventos.
+    *   **Formularios:** Formularios para reportar problemas y registrarse en eventos.
+    *   **Modales:** Ventanas modales para compartir y registrarse en eventos.
+    *   **Pie de Página:** Un pie de página simple con información de copyright.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+**Características:**
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+*   **Diseño Responsivo:** La aplicación es totalmente responsiva y funciona en todos los dispositivos.
+*   **Modo Oscuro/Claro:** Los usuarios pueden cambiar entre los temas oscuro y claro.
+*   **Contadores:** La aplicación realiza un seguimiento del número de reportes ciudadanos, voces amplificadas y participantes en línea.
+*   **Reportes Ciudadanos:** Los usuarios pueden enviar reportes anónimos sobre problemas ambientales.
+*   **Eventos en Línea:** La aplicación muestra una lista de los próximos eventos en línea y los usuarios pueden registrarse en ellos. La lista de eventos ha sido actualizada para incluir:
+    *   Webinar: Introducción a la Sostenibilidad
+    *   Taller Virtual de Reciclaje Creativo
+    *   Charla: El Futuro de la Energía Limpia
+    *   Grupo de Lectura: '''Primavera Silenciosa'''
+    *   Cine al Aire Libre: Documentales que Inspiran
+    *   Competencia de Fotografía: #MiBarrioVerde
+*   **Funcionalidad de Compartir:** Los usuarios pueden compartir la aplicación a través de una URL.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### Plan Actual
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+La última solicitud fue agregar dos nuevos eventos a la sección "Agenda Verde", lo cual se ha completado.
