@@ -7,6 +7,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { QRCodeCanvas } from 'qrcode.react';
 import styles from './page.module.css';
 import { saveReport, registerForEvent, incrementShareCount } from './actions';
+import Involvement from '@/components/Involvement';
 
 // --- ICONS ---
 const ArrowPrevIcon = () => <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>;
@@ -188,7 +189,7 @@ function ImpactCounter({ target, label, icon }) {
     useEffect(() => {
         if (entry && entry.isIntersecting && !hasAnimated.current) {
             hasAnimated.current = true;
-            let start = 0;
+            const start = 0;
             const end = target;
             if (start === end) {
                 setCount(end);
@@ -301,6 +302,7 @@ export default function HomePageClient({ initialCounters }) {
           <a href="#noticias">Noticias</a>
           <a href="#denuncias">Buzón</a>
           <a href="#eventos">Eventos</a>
+          <a href="#involucrate">Involúcrate</a>
           <button onClick={() => setShareModalOpen(true)} className={styles.navButton}><ShareIcon/> Compartir</button>
         </nav>
         <button onClick={toggleTheme} className={styles.themeToggler} aria-label="Toggle theme">
@@ -371,6 +373,11 @@ export default function HomePageClient({ initialCounters }) {
             ))}
           </div>
         </section>
+        <section id="involucrate" className={`${styles.section} ${styles.darkSection}`}>
+        <h2>Involúcrate y Haz la Diferencia</h2>
+        <p className={styles.sectionDescription}>El cambio real proviene de la acción colectiva. Descubre cómo puedes ser un agente de cambio en tu propia comunidad y más allá.</p>
+        <Involvement />
+      </section>
       </main>
 
       <footer className={styles.footer}>

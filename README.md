@@ -25,31 +25,33 @@ La aplicación se ha construido siguiendo principios de diseño moderno, prioriz
 
 El objetivo de esta fase es enriquecer la plataforma con contenido educativo, mejorar la relevancia de los eventos y aumentar el dinamismo de la interfaz.
 
-### 1. **Creación de la Sección "Principios Ecológicos"**
+### 1. **Creación de la Sección "Involúcrate" con Contenido Animado**
+*   **Objetivo:** Crear una sección visualmente atractiva que motive a los usuarios a participar activamente.
+*   **Acciones:**
+    *   Diseñar e implementar una nueva sección que alterne bloques de texto e imagen.
+    *   Cada bloque contendrá un texto inspirador sobre la acción comunitaria y una imagen representativa (proporcionadas por el usuario).
+    *   El primer bloque mostrará la imagen a la derecha y el texto a la izquierda.
+    *   El segundo bloque invertirá el orden, con la imagen a la izquierda y el texto a la derecha.
+    *   Ambos bloques utilizarán el componente `AnimatedElement` para aparecer con animaciones de deslizamiento (`slideInLeft` y `slideInRight`) al hacer scroll.
+
+### 2. **Creación de la Sección "Principios Ecológicos"**
 *   **Objetivo:** Educar a los usuarios sobre las "3R" (Reducir, Reutilizar, Reciclar) de una manera visualmente atractiva.
 *   **Acciones:**
     *   Diseñar e implementar una nueva sección en la página principal.
     *   La sección contendrá tres tarjetas, una para cada principio.
-    *   Cada tarjeta incluirá:
-        *   Un icono representativo (Ej: Papelera para Reducir, Símbolo de reciclaje para Reciclar).
-        *   Un título claro: "Reduce", "Reutiliza", "Recicla".
-        *   Un texto descriptivo con consejos prácticos y aplicables al contexto de VES.
+    *   Cada tarjeta incluirá un icono representativo, un título y un texto descriptivo.
 
-### 2. **Actualización de Eventos con Énfasis en la Municipalidad de VES**
-*   **Objetivo:** Aumentar la relevancia y credibilidad de los eventos mostrados, simulando una colaboración o iniciativa municipal.
+### 3. **Actualización de Eventos con Énfasis en la Municipalidad de VES**
+*   **Objetivo:** Aumentar la relevancia y credibilidad de los eventos mostrados.
 *   **Acciones:**
-    *   Se modificará el array `events` en el componente `HomePageClient`.
-    *   Los nuevos eventos incluirán títulos y descripciones que hagan referencia a programas y lugares específicos de VES.
+    *   Se modificará el array de eventos para incluir títulos y descripciones que hagan referencia a programas y lugares específicos de VES.
 
-### 3. **Creación del Cuadro de Degradación de Residuos**
-*   **Objetivo:** Crear un impacto visual que eduque sobre la longevidad de los distintos tipos de basura.
+### 4. **Creación del Cuadro de Degradación de Residuos**
+*   **Objetivo:** Educar sobre el impacto a largo plazo de la basura.
 *   **Acciones:**
-    *   Diseñar una nueva sección que muestre una línea de tiempo o una comparación directa del tiempo de degradación de varios objetos comunes (cáscara de plátano, bolsa de plástico, botella de vidrio, etc.).
-    *   Cada elemento del cuadro contendrá una ilustración o icono, el nombre del residuo y su tiempo estimado de descomposición.
+    *   Diseñar una sección que muestre el tiempo de degradación de varios objetos comunes con ilustraciones y animaciones.
 
-### 4. **Implementación de Animaciones "On-Scroll"**
-*   **Objetivo:** Mejorar la experiencia de usuario añadiendo interactividad y dinamismo a través de la página.
+### 5. **Implementación de Animaciones "On-Scroll"**
+*   **Objetivo:** Mejorar la experiencia de usuario añadiendo interactividad y dinamismo.
 *   **Acciones:**
-    *   Se creará un componente reutilizable (`AnimatedElement`) que utilice el hook `useIntersectionObserver`.
-    *   Este componente envolverá las imágenes, tarjetas y otros elementos que deban aparecer dinámicamente.
-    *   Se definirán animaciones CSS genéricas (ej: `fadeInUp`, `slideInLeft`) que se aplicarán a los elementos cuando entren en el viewport del usuario, creando una experiencia de navegación fluida y moderna.
+    *   Se creará un componente reutilizable (`AnimatedElement`) que, usando `useIntersectionObserver`, aplicará animaciones CSS a los elementos cuando entren en el viewport del usuario.

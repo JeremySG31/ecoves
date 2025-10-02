@@ -13,7 +13,6 @@ export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
-    const root = window.document.documentElement;
     // Instead of adding the class to the root `<html>` element,
     // we'll toggle a class on the `<body>`
     if (theme === 'light') {

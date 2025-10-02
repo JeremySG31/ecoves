@@ -1,0 +1,112 @@
+.involvementSection {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    padding: 8rem 2rem;
+    overflow-x: hidden;
+  }
+  
+  .involvementItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .involvementSection.visible .involvementItem {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .imageBlock {
+    flex-shrink: 0; /* Prevent image from shrinking */
+  }
+  
+  .imageBlock img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .textBlock {
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .textBlock h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--highlightColor);
+    margin-bottom: 1rem;
+  }
+  
+  .textBlock p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  
+  /* Animations for left and right items */
+  .involvementSection.visible .involvementItemLeft {
+    animation: slideInLeft 1s forwards;
+  }
+  
+  .involvementSection.visible .involvementItemRight {
+    animation: slideInRight 1s forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .involvementSection {
+      padding: 10rem 4rem;
+    }
+  
+    .involvementItem {
+      flex-direction: row;
+      justify-content: space-between; /* Push items to the edges */
+      gap: 5rem;
+      width: 100%;
+    }
+  
+    .involvementItem.involvementItemRight {
+      flex-direction: row-reverse;
+    }
+  
+    .textBlock {
+      flex-basis: 45%; /* Set a base width */
+      text-align: left;
+    }
+
+    .imageBlock {
+      flex-basis: 50%; /* Set a base width */
+    }
+  
+    .involvementItem.involvementItemRight .textBlock {
+      text-align: right;
+    }
+  }
+  
