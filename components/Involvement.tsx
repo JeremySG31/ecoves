@@ -29,7 +29,7 @@ const Involvement = () => {
       }
     );
 
-    let currentRef = sectionRef.current;
+    const currentRef = sectionRef.current;
 
     if (currentRef) {
       observer.observe(currentRef);
